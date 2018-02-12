@@ -7,7 +7,8 @@ import java.util.Collection;
 @Entity
 public class RoleClass {
 
-    @Id@GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(unique=true)

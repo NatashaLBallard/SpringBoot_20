@@ -1,6 +1,6 @@
 package com.springboot_20.demo;
 
-import javax.management.relation.Role;
+
 import javax.persistence.*;
 import java.util.Collection;
 
@@ -31,7 +31,7 @@ public class User {
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(joinColumns = @JoinColumn(name="user_id"),
     inverseJoinColumns = @JoinColumn(name="role_id"))
-    private Collection<Role> roles;
+    private Collection<RoleClass> roles;
 
 
     public long getId() {
@@ -90,11 +90,11 @@ public class User {
         this.username = username;
     }
 
-    public Collection<Role> getRoles() {
+    public Collection<RoleClass> getRoles() {
         return roles;
     }
 
-    public void setRoles(Collection<Role> roles) {
+    public void setRoles(Collection<RoleClass> roles) {
         this.roles = roles;
     }
 }
